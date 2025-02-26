@@ -5,7 +5,7 @@ import useContentSection from "../Hooks/useContentSection";
 const ContactSection = () => {
   const {handleChange,handleSubmit,formData,status} = useContentSection();
   return (
-    <section id="contact" className="h-screen flex gap-16 flex-col md:flex-row justify-center items-center text-center md:text-left ">
+    <section id="contact" className="h-screen flex gap-16 flex-col md:flex-row justify-center items-center text-center md:text-left md:px-[6rem] py-8">
       <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <motion.h1
