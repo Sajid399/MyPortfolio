@@ -1,21 +1,14 @@
 import { motion } from "framer-motion";
 import { projects } from "./Data";
+import Heading from "./Heading";
 
 const ProjectSections = () => {
   
 
   return (
-    <section id="projects" className="container mx-auto px-6 md:px-[6rem] py-8">
+    <section id="projects" className="container mx-auto px-6 md:px-[4rem] py-8">
 
-      <motion.h1
-        className="text-4xl md:text-5xl pb-6 font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text text-center"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.2, rotate: 5 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Projects
-      </motion.h1>
+        <Heading title={'Projects'} rotate={5}/>
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"

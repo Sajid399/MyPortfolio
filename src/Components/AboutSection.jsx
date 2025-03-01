@@ -1,19 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion'
+import Heading from './Heading';
 const AboutSection = () => {
   return (
-    <section id="about" className="px-6 md:px-[6rem] py-16 text-center md:text-left">
+    <section id="about" className="px-6 md:px-[6rem] py-5 md:py-16 text-center md:text-left">
       <div className=" mx-auto">
-        <motion.h1
-          className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-300 via-purple-500 to-blue-400 text-transparent bg-clip-text text-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.2, rotate: -5 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          About Me
-        </motion.h1>
-
+       
+       <Heading title={' About Me'} rotate={-5}/>
 
         <p className="text-gray-400 mt-6 text-lg leading-relaxed">
           I am a passionate <span className="text-blue-400">frontend developer</span> with a strong focus on crafting visually appealing, intuitive, and user-friendly web applications. I thrive on transforming complex ideas into clean, efficient, and dynamic code. My expertise spans HTML, CSS, JavaScript, React.js, and Tailwind CSS, Redux and ReduxToolkit empowering me to build scalable and maintainable solutions.

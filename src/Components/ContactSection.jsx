@@ -1,22 +1,17 @@
 import { motion } from "framer-motion";
 import {  FaLinkedinIn,FaWhatsappSquare,FaGithub } from "react-icons/fa";
 import useContentSection from "../Hooks/useContentSection";
+import SocialLink from "./SocialLink";
+import Heading from "./Heading";
 
 const ContactSection = () => {
   const {handleChange,handleSubmit,formData,status} = useContentSection();
   return (
-    <section id="contact" className="h-screen flex gap-16 flex-col md:flex-row justify-center items-center text-center md:text-left md:px-[6rem] py-8">
+    <section id="contact" className="md:h-screen flex gap-16 flex-col md:flex-row justify-center items-center text-center md:text-left md:px-[6rem] px-8 py-8">
       <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
-          <motion.h1
-            className="text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-transparent bg-clip-text "
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.2, rotate: -5 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            DO YOU HAVE A PROJECT TO DISCUSS?
-          </motion.h1>
+         
+          <Heading title={' DO YOU HAVE A PROJECT TO DISCUSS?'} rotate={-5} className={'md:text-[1.888rem]'}/>
 
           <p className="mt-3 text-xl font-semibold text-gray-400">GET IN TOUCH 💬</p>
 
@@ -24,43 +19,13 @@ const ContactSection = () => {
           <div className="mt-6">
             <h3 className="text-lg font-semibold text-gray-400">CONTACT</h3>
             <p className="text-blue-400">sajidbashir399@gmail.com</p>
+            <p>03419319429</p>
           </div>
 
         
           <div className="mt-6">
             <h3 className="text-lg font-semibold text-gray-400">SOCIAL MEDIA</h3>
-            <div className="flex gap-4 mt-2">
-              {[
-                {
-                  href: "https://www.linkedin.com/in/sajid-bashir-5548aa259",
-                  icon: <FaLinkedinIn className="text-2xl" />,
-                  hoverColor: "text-blue-400",
-                },
-                {
-                  href: "https://wa.me/923419319429",
-                  icon: <FaWhatsappSquare className="text-2xl" />,
-                  hoverColor: "text-green-400",
-                },
-                {
-                  href: "https://github.com/Sajid399",
-                  icon: <FaGithub className="text-2xl" />,
-                  hoverColor: "text-gray-400",
-                },
-              ].map((item, index) => (
-                <motion.a
-                  key={index}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`cursor-pointer ${item.hoverColor}`}
-                  whileHover={{ scale: 1.3, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {item.icon}
-                </motion.a>
-              ))}
-            </div>
+            <SocialLink />
           </div>
         </div>
 
@@ -96,7 +61,7 @@ const ContactSection = () => {
             />
             <motion.button
               type="submit"
-              className="w-full py-3 rounded-md font-semibold text-white bg-gradient-to-r from-pink-500 to-blue-500 hover:shadow-lg"
+              className="w-full py-2 md:py-3 rounded-md font-semibold text-white bg-gradient-to-r from-pink-500 to-blue-500 hover:shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

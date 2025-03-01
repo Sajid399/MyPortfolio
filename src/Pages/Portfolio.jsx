@@ -11,7 +11,7 @@ import Navbar from "../Components/Navbar";
 
 const Portfolio = () => {
     return (
-        <div id="home" className="font-sans bg-gray-900 text-white px-10">
+        <div id="home" className="font-sans bg-gray-900 text-white">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

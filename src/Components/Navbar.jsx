@@ -1,26 +1,19 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGlobe, FaBars, FaTimes } from "react-icons/fa";
+import Heading from "./Heading";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <motion.nav
-            className="p-4 flex justify-between items-center container py-6 mx-auto md:sticky top-0 z-50 bg-[#101828] rounded-lg shadow-lg"
+            className="p-4 w-full flex justify-between items-center container py-6 mx-auto sticky top-0 z-50 bg-[#101828]  rounded-lg shadow-xl"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <motion.h1
-                className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-                SRS SAJID
-            </motion.h1>
+            <Heading title={' SRS SAJID'} rotate={5} className="text-2xl"/>
 
             <div className="hidden md:flex space-x-8 text-white">
                 {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
@@ -75,12 +68,12 @@ const Navbar = () => {
                             </motion.a>
                         ))}
 
-                        <button
+                        {/* <button
                             onClick={() => setIsOpen(false)}
                             className="text-xl text-gray-300 hover:text-red-400"
                         >
                             Close Menu
-                        </button>
+                        </button> */}
                     </motion.div>
                 )}
             </AnimatePresence>
