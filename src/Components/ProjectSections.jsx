@@ -8,7 +8,7 @@ const ProjectSections = () => {
   return (
     <section id="projects" className="container mx-auto px-6 md:px-[4rem] py-8">
 
-        <Heading title={'Projects'} rotate={5}/>
+        <Heading title={'Projects'} rotate={5} className={'text-3xl md:text-4xl'}/>
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"

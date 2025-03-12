@@ -2,8 +2,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Heading from "./Heading";
+import useTheme from "../Hooks/useTheme";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 const Navbar = () => {
+    const { theme, toggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -37,8 +40,11 @@ const Navbar = () => {
             <motion.button
                 className="hidden md:flex items-center px-4 py-1 rounded-full bg-transparent border-2 border-pink-500 text-white text-sm font-semibold transition-all duration-300 hover:bg-pink-500 hover:text-black"
                 whileHover={{ scale: 1.1 }}
+                onClick={toggleTheme}
             >
-                SRS <FaGlobe className="ml-2 text-lg" />
+                {/* SRS <FaGlobe className="ml-2 text-lg" /> */}
+                {theme === "dark" ? <BsSun size={20} /> : <BsMoon
+                 size={20} />}
             </motion.button>
 
             <div className="md:hidden">

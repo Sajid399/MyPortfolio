@@ -55,7 +55,9 @@ export const projects = [
       image: project6 
     }
   ];
-  
+export const headingTexts = [
+  'Full Stack','Front End' , 'Back End'
+] 
   
 
 export const skills = [

@@ -11,7 +11,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="container mx-auto px-6 md:px-[4rem] py-5 md:py-16 text-center">
       <div className="mx-auto">
-        <Heading title={' Skills'} rotate={5} />
+        <Heading title={' Skills'} rotate={5} className={'text-3xl md:text-4xl'}/>
 
 
         <motion.div

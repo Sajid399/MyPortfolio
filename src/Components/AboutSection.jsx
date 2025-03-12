@@ -6,10 +6,10 @@ const AboutSection = () => {
     <section id="about" className="px-6 md:px-[6rem] py-5 md:py-16 text-center md:text-left">
       <div className=" mx-auto">
        
-       <Heading title={' About Me'} rotate={-5}/>
+       <Heading title={' About Me'} rotate={-5} className={'text-3xl md:text-4xl'}/>
 
         <p className="text-gray-400 mt-6 text-lg leading-relaxed">
-          I am a passionate <span className="text-blue-400">frontend developer</span> with a strong focus on crafting visually appealing, intuitive, and user-friendly web applications. I thrive on transforming complex ideas into clean, efficient, and dynamic code. My expertise spans HTML, CSS, JavaScript, React.js, and Tailwind CSS, Redux and ReduxToolkit empowering me to build scalable and maintainable solutions.
+          I am a passionate <span className="text-blue-400">full stack developer</span> with a strong focus on crafting visually appealing, intuitive, and user-friendly web applications. I thrive on transforming complex ideas into clean, efficient, and dynamic code. My expertise spans HTML, CSS, JavaScript, React.js, and Tailwind CSS, Redux and ReduxToolkit empowering me to build scalable and maintainable solutions.
           <br /><br />
           Beyond frontend development, I have a solid background in backend technologies such as PHP, Laravel, Node.js, and MySQL. This comprehensive skill set enables me to develop robust full-stack applications that perform seamlessly on both client and server sides.
           <br /><br />
